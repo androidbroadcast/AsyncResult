@@ -1,0 +1,10 @@
+plugins {
+    id 'kotlin'
+}
+
+dependencies {
+    def retrofit2Version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    implementation project(':retrofit-result')
+}

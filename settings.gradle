@@ -1,0 +1,4 @@
+rootProject.name = "AsyncResult"
+include ':sample'
+include ':result'
+include ':retrofit-result'
