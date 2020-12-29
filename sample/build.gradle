@@ -1,10 +1,13 @@
 plugins {
     id 'kotlin'
+    id 'kotlinx-serialization'
 }
 
 dependencies {
     def retrofit2Version = '2.9.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
     implementation project(':retrofit-result')
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1'
 }
