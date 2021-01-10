@@ -21,7 +21,7 @@ interface GitHub {
     suspend fun contributors(
         @Path("owner") owner: String,
         @Path("repo") repo: String
-    ): Result<List<Contributor>>
+    ): Result<List<ContributorDTO>>
 }
 
 
@@ -30,7 +30,7 @@ fun main(): Unit = runBlocking {
     val retrofit = createRetrofit()
     val github = retrofit.create(GitHub::class.java)
 
-    val callResult: Result<List<Contributor>> = github.contributors("kirich1409", "ViewBindingPropertyDelegate")
+    val callResult: Result<List<ContributorDTO>> = github.contributors("kirich1409", "ViewBindingPropertyDelegate")
     if (callResult.isSuccess()) {
         val contributors = callResult.asSuccess().value
         print(contributors)
